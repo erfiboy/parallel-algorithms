@@ -1,2 +1,4 @@
 files.zip
 pth_msort.pdf
+*.out
+*.json

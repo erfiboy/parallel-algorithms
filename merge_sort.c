@@ -14,7 +14,7 @@ void merge(int* value, int start, int mid, int end, int* test_sorted)
 
     int total_array_size = end - start + 1;
     
-    for(int merge_index = 0; merge_index <= total_array_size; merge_index++){
+    for(int merge_index = start; merge_index <= total_array_size+start; merge_index++){
         if (left_pointer >= mid +1){
             test_sorted[merge_index] = value[right_pointer];
             right_pointer++;            
@@ -34,9 +34,8 @@ void merge(int* value, int start, int mid, int end, int* test_sorted)
 
     }
 
-    
     for(int merge_index = 0; merge_index <= total_array_size; merge_index++){
-        value[start+merge_index] = test_sorted[merge_index];
+        value[start+merge_index] = test_sorted[merge_index+start];
     }
 }
 
@@ -67,7 +66,7 @@ void fillArray ( int** values, unsigned int N )
 
 int main ( int argc, char* argv[] )
 {
-    int N = 10000000;
+    int N = 1000000000;
     
     int* values = (int*) malloc ( sizeof(int) * N );
 	fillArray ( &values, N );

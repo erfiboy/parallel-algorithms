@@ -3,8 +3,8 @@
 #include "pth_msort.h"
 
 void mergeSortParallel (const int* values, unsigned int N, int* sorted) {
-	
 
+    
 }
 
 void merge(int* value, int start, int mid, int end, int* test_sorted)
