@@ -4,6 +4,9 @@
 
 void mergeSortParallel (const int* values, unsigned int N, int* sorted) {
 
+    for (unsigned int i = 0; i < N; i++){
+        sorted[i] = i;
+    }
     
 }
 
